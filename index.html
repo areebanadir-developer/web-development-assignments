@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript String Methods Assignment</title>
+    <style>
+        body {
+            background: linear-gradient(to right, #74ebd5, #ACB6E5);
+
+            font-family: Arial, sans-serif;
+            background-color: #f4f6f9;
+            text-align: center;
+            padding: 70px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+
+        h1 {
+            color: #2c3e50;
+        }
+
+        .container {
+
+            background: white;
+            padding: 25px;
+            width: 35%;
+            border-radius: 15px;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+
+            /* display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            background: white;
+            padding: 20px;
+            width: 35%;
+            margin: auto;
+            border-radius: 10px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1); */
+        }
+
+        .input-group {
+            display: flex;
+            gap: 10px;
+            justify-content: center;
+            width: 100%;
+        }
+
+        input {
+            padding: 10px;
+            width: 70%;
+            font-size: 16px;
+            border: 2px solid #ccc;
+            border-radius: 8px;
+        }
+
+        button {
+            padding: 10px 20px;
+            font-size: 16px;
+            background: linear-gradient(to right, #3498db, #6dd5fa);
+            color: white;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        button:hover {
+            transform: scale(1.05);
+        }
+
+        #output {
+            margin-top: 20px;
+            padding: 15px;
+            background-color: #f1f2f6;
+            border-left: 5px solid #3498db;
+            border-radius: 8px;
+        }
+
+        /* #output {
+            text-align: left;
+            margin-top: 20px;
+            padding: 15px;
+            background-color: #ecf0f1;
+            border-radius: 8px;
+        } */
+    </style>
+</head>
+
+<body>
+
+    <h1>JavaScript String Methods</h1>
+
+    <div class="container">
+        <div class="input-group">
+            <input type="text" id="userInput" placeholder="Enter some text here">
+            <button onclick="applyMethods()">Apply String Methods</button>
+        </div>
+        <div id="output"></div>
+    </div>
+
+    <script>
+
+        function applyMethods() {
+
+            let text = document.getElementById("userInput").value;
+
+            let upper = text.toUpperCase();
+            let lower = text.toLowerCase();
+            let length = text.length;
+            let slice = text.slice(1, 5);
+            let trim = text.trim();
+            let repeat = text.repeat(2);
+            let char = text.charAt(0);
+            let replace = text.replace(/a/g, "*");
+
+
+
+            let result =
+                "Uppercase: " + upper + "<br>" +
+                "Lowercase: " + lower + "<br>" +
+                "Length: " + length + "<br>" +
+                "Slice: " + slice + "<br>" +
+                "Trim: " + trim + "<br>" +
+                "Repeat: " + repeat + "<br>" +
+                "First Character: " + char + "<br>" +
+                "Replace: " + replace;
+
+
+
+            document.getElementById("output").innerHTML = result;
+        }
+
+    </script>
+
+
+
+</body>
+
+</html>
